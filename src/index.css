@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Chango&display=swap');
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +7,120 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  justify-content: center;
+  
+  background-color:  #19aa8d;
+  
+  
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+
+}
+
+input {
+  border-radius: 3px;
+  box-shadow: none;
+  border: 1px black solid;
+  margin: auto;
+  width: 100%;
+  
+  padding:  5px 5px ;
+  box-sizing: border-box;
+  text-align: justify;
+  
+}
+
+select {
+  border-radius: 3px;
+  box-shadow: none;
+  border: 1px black solid;
+  margin: auto;
+  width: 100%;
+  
+  padding:  5px 0 5px 0;
+}
+
+
+.form-container {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background-color: white;
+  width: 300px;
+  border: 1px black solid;
+  justify-content: center;
+  align-items: center;
+  color: black;
+	border-radius: 3px;
+	margin-bottom: 5px;
+	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+	padding: 30px;
+
+}
+
+button:disabled  {
+  width: 100%;
+  border-radius: 3px;
+  font-size: 16px;
+	font-weight: bold;
+	background: grey !important;
+	border: none;
+	min-width: 140px;
+  padding:  10px 0 10px 0;
+  margin-top: 15px;
+  color: white;
+  margin-bottom: 20px;
+}
+
+button  {
+  width: 100%;
+  border-radius: 3px;
+  font-size: 16px;
+	font-weight: bold;
+	background: #19aa8d !important;
+	border: none;
+	min-width: 140px;
+  padding:  10px 0 10px 0;
+  margin-top: 15px;
+  color: white;
+  margin-bottom: 20px;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+button:disabled:hover{
+  cursor: initial;
+}
+
+
+input[type=text]:focus {
+  border: 3px solid #555;
+}
+
+label {
+  font-family: 'Chango', cursive;
+  font-size: small;
+  
+}
+
+img {
+  width: 100%;
+}
+
+h2 {
+  font-family: 'Chango', cursive;
+  font-size:xx-large
+}
+
+.test {
+  margin-top: 30px;
 }

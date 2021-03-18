@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import SignUpView from './SignUpView';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <SignUpView />
   </React.StrictMode>,
   document.getElementById('root')
 );
