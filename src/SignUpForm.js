@@ -143,10 +143,11 @@ function MySignUpFormComponent() {
         setUsers([...users, data])
         if (res.status < 200 || res.status > 299) {
           if (res.status > 399 || res.status < 499) {
-            alert('Ha ocurrido un error en tu registro')
+            alert(`Ha ocurrido un error en tu registro, status:${res.status}`)
           }
         } else {
-          alert('Usuario Registrado Exitosamente')
+          alert(`Usuario Registrado Exitosamente, status:${res.status}`)
+          console.log(`Sstatus:${res.status}`)
           window.location.reload()
         }
 
