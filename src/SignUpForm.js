@@ -8,6 +8,7 @@ import ReCAPTCHA from 'react-google-recaptcha';
 function MySignUpFormComponent() {
   const emailRegex = /^(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])$/
   const passRegex = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/
+  const nameRegex =  /^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$/
   const reRef = useRef()
 
   //Email Validation
@@ -15,6 +16,17 @@ function MySignUpFormComponent() {
     validate(value) {
       if (!emailRegex.test(value)) {
         return Invalid('Email Invalido');
+      }
+
+      return Valid(value);
+    }
+  });
+
+ //Name and Lastname Validation 
+  const $FullName = CustomField.extends($Text).with({
+    validate(value) {
+      if (!nameRegex.test(value)) {
+        return Invalid('Valor invalido, solo utilizar letras');
       }
 
       return Valid(value);
@@ -62,11 +74,11 @@ function MySignUpFormComponent() {
 
   const form = useForm($Form({
     fields: {
-      first_name: $Text('Nombre').with({
+      first_name: $FullName('Nombre').with({
         placeholder: 'John',
         defaulValues: 'Carlos'
       }),
-      last_name: $Text('Apellido').with({
+      last_name: $FullName('Apellido').with({
         placeholder: 'Doe',
       }),
       age: $Age('Edad').with({

@@ -1,5 +1,16 @@
 {
   "users": [
-
+    {
+      "first_name": "Carlos",
+      "last_name": "Plaza",
+      "age": 25,
+      "num_children": 1,
+      "gender": "M",
+      "email": "carlosfplaza@hotmail.com",
+      "password": "FELIXale16*",
+      "fav_color": "#344ceb",
+      "token": "03AGdBq25-qAwOSnfveGiJJwFajJqoncwUiB-dVdatfQeG9kDPizladWabzZi1Y_bFSoJYV221PlbUv9XgauNtHXKwWVgb5YtAaiBUMZcpqFy86vu8X4rY3__vAK1y0LudUgttwtVEPRPPg5iO01Umv_1Krykev--t8Hl2BVC9-sw5MNaG0fyi0IejrAWd_CU3ZnnVS6scSGljHn5E62VYImWN14PgX5Uxl2EOjJQL1m6ZlIsyp-DA4akbR77RPUHkAl-2r7KisMj4EGjIK6YdAaam87EGoY-Tjn8Ha1WY8lATGp2M4FB57J3qVUoxBb0J4W7UflRq7tzb271AiZr_Z0pyw7L3QTwqGyNI8aZ8dMww11-pCJgglx0WvzxOapQS3wbl47aTuIGH61hbstaQWs6VyceNWcS_ZnuPZ8QKvc5BQhuROEucX-9cN181Ny1lGeWrFhCkbCqm",
+      "id": 1
+    }
   ]
 }
